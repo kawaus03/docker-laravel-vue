@@ -1,1 +1,8 @@
 version: '3'
+
+services:
+
+  laravel-php:
+    build:
+      context: docker/php
+      dockerfile: Dockerfile
