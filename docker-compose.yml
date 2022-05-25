@@ -2,7 +2,22 @@ version: '3'
 
 services:
 
-  laravel-php:
+  nginx:
+    build:
+      context: docker/nginx
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/logs:/var/log/nginx
+    ports:
+      - 8080:80
+    depends_on:
+      - php
+
+  php-fpm:
     build:
       context: docker/php
       dockerfile: Dockerfile
+    volumes:
+      - ./src/laravel-sanctum:/var/www/src/laravel-sanctum
+    working_dir: /var/www/src/laravel-sanctum
