@@ -27,7 +27,7 @@ RUN apt-get install -y zlib1g-dev libicu-dev g++ && \
 COPY php.ini /usr/local/etc/php/php.ini
 
 # Composer installation
-COPY --from=composer:2.2 /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer:2.3 /usr/bin/composer /usr/local/bin/composer
 
 # Set Composer Config
 RUN composer config -g process-timeout 3600 && \
