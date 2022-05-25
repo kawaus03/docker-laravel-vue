@@ -24,6 +24,6 @@ RUN apt-get install -y zlib1g-dev libicu-dev g++ && \
     docker-php-ext-install intl
 
 # Clean up
-RUN apt-get clean \
- && apt-get -y autoremove \
- && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get clean && \
+    apt-get -y autoremove && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
