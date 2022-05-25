@@ -2,7 +2,28 @@
 FROM php:8.1-fpm
 
 # Initialize
-RUN apt-get update \
- && apt-get clean \
+RUN apt-get update
+
+# Git
+RUN apt-get install -y git
+
+# Curl
+RUN apt-get install -y libcurl3-dev curl && docker-php-ext-install curl
+
+# GD
+RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
+RUN docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/
+RUN docker-php-ext-install gd
+
+# BC Math
+RUN docker-php-ext-install bcmath
+
+# intl
+RUN apt-get install -y zlib1g-dev libicu-dev g++ && \
+    docker-php-ext-configure intl && \
+    docker-php-ext-install intl
+
+# Clean up
+RUN apt-get clean \
  && apt-get -y autoremove \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
