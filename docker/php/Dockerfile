@@ -23,6 +23,9 @@ RUN apt-get install -y zlib1g-dev libicu-dev g++ && \
     docker-php-ext-configure intl && \
     docker-php-ext-install intl
 
+# MySQL
+RUN docker-php-ext-install pdo_mysql
+
 # Custom php.ini config
 COPY php.ini /usr/local/etc/php/php.ini
 

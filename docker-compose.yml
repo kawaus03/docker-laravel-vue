@@ -1,5 +1,7 @@
 version: '3'
 
+######### Services ###################################
+
 services:
 
   nginx:
@@ -21,3 +23,22 @@ services:
     volumes:
       - ./src/laravel-sanctum:/var/www/src/laravel-sanctum
     working_dir: /var/www/src/laravel-sanctum
+
+  mysql:
+    build:
+      context: docker/mysql
+      dockerfile: Dockerfile
+    volumes:
+      - mysql-volume:/var/lib/mysql
+    ports:
+      - 33060:3306
+    environment:
+      - MYSQL_DATABASE=laravel
+      - MYSQL_USER=laravel
+      - MYSQL_PASSWORD=laravel
+      - MYSQL_ROOT_PASSWORD=laravel
+
+######### Volumes ###################################
+
+volumes:
+  mysql-volume:

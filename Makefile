@@ -15,7 +15,7 @@ build:
 # Initial installation
 #-----------------------------------------------------------
 
-init: build laravel-env laravel-composer-install laravel-key
+init: build laravel-env laravel-composer-install laravel-key laravel-migrate
 
 #-----------------------------------------------------------
 # Laravel Commands
@@ -29,3 +29,6 @@ laravel-composer-install:
 
 laravel-key:
 	docker-compose exec php-fpm php artisan key:generate
+
+laravel-migrate:
+	docker-compose exec php-fpm php artisan migrate --seed
