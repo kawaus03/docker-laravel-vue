@@ -23,6 +23,9 @@ RUN apt-get install -y zlib1g-dev libicu-dev g++ && \
     docker-php-ext-configure intl && \
     docker-php-ext-install intl
 
+# Custom php.ini config
+COPY php.ini /usr/local/etc/php/php.ini
+
 # Clean up
 RUN apt-get clean && \
     apt-get -y autoremove && \
