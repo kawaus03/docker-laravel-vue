@@ -36,4 +36,5 @@ $ make init
 5. Access to Laravel project and Vuejs project.
 
 * Laravel project
+
 http://laravel-sanctum.work
