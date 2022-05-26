@@ -31,16 +31,16 @@ $ make init
 4. Append to the `/etc/hosts` file.
 
 ```bash
-127.0.0.1 laravel-sanctum.work
-127.0.0.1 vue-sanctum.work
+127.0.0.1 laravel-vue-sanctum.work
+127.0.0.1 api.laravel-vue-sanctum.work
 ```
 
 5. Access to Laravel and Vuejs project.
 
 * Laravel project
 
-    http://laravel-sanctum.work
+    http://api.laravel-vue-sanctum.work
 
 * Vuejs project
 
-    http://vue-sanctum.work
+    http://laravel-vue-sanctum.work
