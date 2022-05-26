@@ -14,7 +14,7 @@
 $ git clone https://github.com/kawaus03/docker-laravel-vue.git
 ```
 
-2. Clone the Laravel project and Vuejs project in the `src` dir.
+2. Clone the Laravel and Vuejs project in the `src` dir.
 
 ```bash
 $ cd docker-laravel-vue/src
@@ -35,7 +35,7 @@ $ make init
 127.0.0.1 vue-sanctum.work
 ```
 
-5. Access to Laravel project and Vuejs project.
+5. Access to Laravel and Vuejs project.
 
 * Laravel project
 
