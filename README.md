@@ -8,7 +8,7 @@
 
 ## Initial installation
 
-1. Clone the repository.
+1. Clone this repository.
 
 ```bash
 $ git clone https://github.com/kawaus03/docker-laravel-vue.git
