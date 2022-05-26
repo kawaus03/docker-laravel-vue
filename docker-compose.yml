@@ -14,7 +14,8 @@ services:
     ports:
       - 80:80
     depends_on:
-      - php
+      - php-fpm
+      - node
 
   php-fpm:
     build:
@@ -37,6 +38,15 @@ services:
       - MYSQL_USER=laravel
       - MYSQL_PASSWORD=laravel
       - MYSQL_ROOT_PASSWORD=laravel
+
+  node:
+    build:
+      context: docker/node
+      dockerfile: Dockerfile
+    volumes:
+      - ./src/vue-sanctum:/var/www/src/vue-sanctum
+    working_dir: /var/www/src/vue-sanctum
+    command: sh -c "yarn cache clean && yarn install & yarn dev"
 
 ######### Volumes ###################################
 
