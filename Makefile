@@ -21,6 +21,9 @@ init: build laravel-env laravel-composer-install laravel-key laravel-migrate
 # Laravel Commands
 #-----------------------------------------------------------
 
+php-fpm:
+	docker-compose exec php-fpm bash
+
 laravel-env:
 	cp ./src/laravel-sanctum/.env.example ./src/laravel-sanctum/.env
 
@@ -32,3 +35,10 @@ laravel-key:
 
 laravel-migrate:
 	docker-compose exec php-fpm php artisan migrate --seed
+
+#-----------------------------------------------------------
+# Vuejs Commands
+#-----------------------------------------------------------
+
+node:
+	docker-compose exec node /bin/sh
