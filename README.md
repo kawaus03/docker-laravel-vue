@@ -37,4 +37,4 @@ $ make init
 
 * Laravel project
 
-http://laravel-sanctum.work
+    http://laravel-sanctum.work
