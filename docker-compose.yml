@@ -46,7 +46,8 @@ services:
     volumes:
       - ./src/vue-sanctum:/var/www/src/vue-sanctum
     working_dir: /var/www/src/vue-sanctum
-    command: sh -c "yarn cache clean && yarn install & yarn dev"
+    tty: true
+    command: sh -c "yarn dev"
 
 ######### Volumes ###################################
 
