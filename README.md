@@ -29,7 +29,7 @@ $ cd docker-laravel-vue
 $ make init
 ```
 
-4. Install and compiles in running docker container.
+4. Install and compile npm packages in running docker container.
 
 ```bash
 $ cd docker-laravel-vue
