@@ -22,18 +22,20 @@ $ git clone https://github.com/kawaus03/laravel-sanctum.git
 $ git clone https://github.com/kawaus03/vue-sanctum.git
 ```
 
-3. Install npm packages in the host environment.
-
-```bash
-$ cd docker-laravel-vue/src/vue-sanctum
-$ yarn install
-```
-
-4. Execute the initial installation command.
+3. Running the initial installation.
 
 ```bash
 $ cd docker-laravel-vue
 $ make init
+```
+
+4. Install and compiles in running docker container.
+
+```bash
+$ cd docker-laravel-vue
+$ make node
+$ yarn install
+$ yarn dev
 ```
 
 5. Append to the `/etc/hosts` file.

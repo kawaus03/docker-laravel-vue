@@ -15,7 +15,6 @@ services:
       - 80:80
     depends_on:
       - php-fpm
-      - node
 
   php-fpm:
     build:
@@ -47,7 +46,6 @@ services:
       - ./src/vue-sanctum:/var/www/src/vue-sanctum
     working_dir: /var/www/src/vue-sanctum
     tty: true
-    command: sh -c "yarn dev"
 
 ######### Volumes ###################################
 
