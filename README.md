@@ -29,21 +29,21 @@ $ cd docker-laravel-vue/src/vue-sanctum
 $ yarn install
 ```
 
-3. Execute the initial installation command.
+4. Execute the initial installation command.
 
 ```bash
 $ cd docker-laravel-vue
 $ make init
 ```
 
-4. Append to the `/etc/hosts` file.
+5. Append to the `/etc/hosts` file.
 
 ```bash
 127.0.0.1 laravel-vue-sanctum.work
 127.0.0.1 api.laravel-vue-sanctum.work
 ```
 
-5. Access to Laravel and Vuejs project.
+6. Access to Laravel and Vuejs project.
 
 * Laravel project
 
