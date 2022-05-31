@@ -41,16 +41,16 @@ $ yarn dev
 5. Append to the `/etc/hosts` file.
 
 ```bash
-127.0.0.1 laravel-vue-sanctum.work
-127.0.0.1 api.laravel-vue-sanctum.work
+127.0.0.1 docker-laravel-vue.work
+127.0.0.1 api.docker-laravel-vue.work
 ```
 
 6. Access to Laravel and Vuejs project.
 
 * Laravel project
 
-    http://api.laravel-vue-sanctum.work
+    http://api.docker-laravel-vue.work
 
 * Vuejs project
 
-    http://laravel-vue-sanctum.work
+    http://docker-laravel-vue.work
