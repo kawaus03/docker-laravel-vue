@@ -1,4 +1,4 @@
-# Dockerized starter template for Laravel + Vuejs project.
+# Dockerized starter template for Laravel + Vite Vuejs project.
 
 ## Stack includes
 * php-fpm
