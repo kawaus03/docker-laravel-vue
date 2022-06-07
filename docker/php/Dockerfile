@@ -11,9 +11,9 @@ RUN apt-get install -y git
 RUN apt-get install -y libcurl3-dev curl && docker-php-ext-install curl
 
 # GD
-RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev && \
-    docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ && \
-    docker-php-ext-install gd
+RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
+RUN docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/
+RUN docker-php-ext-install gd
 
 # BC Math
 RUN docker-php-ext-install bcmath
